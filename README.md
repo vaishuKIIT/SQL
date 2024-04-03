@@ -38,4 +38,4 @@ Danny is expanding his new Pizza Empire and at the same time, he wants to Uberiz
 10. What was the volume of orders for each day of the week?
 
 **My Solutions:**
-[https://github.com/vaishuKIIT/SQL/blob/main/Case_study_1.sql](https://github.com/vaishuKIIT/SQL/blob/main/Case_study_2.sql)
+https://github.com/vaishuKIIT/SQL/blob/main/Case_study_2.sql
