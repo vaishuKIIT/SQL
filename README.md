@@ -1,5 +1,5 @@
 Image
-View the case study and my solution
+View [the case study] (https://8weeksqlchallenge.com/case-study-1/) and my solution
 
 Business Task:
 Danny wants to use the data to answer a few simple questions about his customers, especially about their visiting patterns, how much money they’ve spent and also which menu items are their favourite.
