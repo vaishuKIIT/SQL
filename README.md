@@ -23,9 +23,7 @@ https://github.com/vaishuKIIT/SQL/blob/main/Case_study_1.sql
 https://8weeksqlchallenge.com/case-study-2/
 
 **Business Task:**
-Danny is expanding his new Pizza Empire and at the same time, he wants to Uberize it, so Pizza Runner was launched!
-
-Danny started by recruiting “runners” to deliver fresh pizza from Pizza Runner Headquarters (otherwise known as Danny’s house) and also maxed out his credit card to pay freelance developers to build a mobile app to accept orders from customers.
+Danny is expanding his new Pizza Empire and at the same time, he wants to Uberize it, so Pizza Runner was launched! Danny started by recruiting “runners” to deliver fresh pizza from Pizza Runner Headquarters (otherwise known as Danny’s house) and also maxed out his credit card to pay freelance developers to build a mobile app to accept orders from customers.
 
 **Case Study Questions:**
 1. How many pizzas were ordered?
@@ -40,4 +38,4 @@ Danny started by recruiting “runners” to deliver fresh pizza from Pizza Runn
 10. What was the volume of orders for each day of the week?
 
 **My Solutions:**
-https://github.com/vaishuKIIT/SQL/blob/main/Case_study_1.sql
+[https://github.com/vaishuKIIT/SQL/blob/main/Case_study_1.sql](https://github.com/vaishuKIIT/SQL/blob/main/Case_study_2.sql)
