@@ -63,7 +63,31 @@ group by order_id
 order by count(order_id) desc limit 1
 
 -- 7. For each customer, how many delivered pizzas had at least 1 change and how many had no changes?
+select c.customer_id,
+  SUM(
+    CASE WHEN c.exclusions != ' ' OR c.extras != ' ' THEN 1
+    ELSE 0
+    END) AS at_least_1_change,
+  SUM(
+    CASE WHEN c.exclusions = ' ' AND c.extras = ' ' THEN 1 
+    ELSE 0
+    END) AS no_change
+FROM customer_orders c
+JOIN runner_orders r
+  ON c.order_id = r.order_id
+WHERE r.distance != 0
+GROUP BY c.customer_id
+ORDER BY c.customer_id;
 
 8. How many pizzas were delivered that had both exclusions and extras?
-9. What was the total volume of pizzas ordered for each hour of the day?
-10. What was the volume of orders for each day of the week?
+SELECT  
+  SUM(
+    CASE WHEN exclusions IS NOT NULL AND extras IS NOT NULL THEN 1
+    ELSE 0
+    END) AS pizza_count_w_exclusions_extras
+FROM customer_orders c
+JOIN runner_orders r
+ON c.order_id = r.order_id
+WHERE r.distance >= 1 
+AND exclusions <> ' ' 
+AND extras <> ' ';
