@@ -26,24 +26,24 @@ nullif (cancellation,'') cancellation
 from pizza_runner.runner_orders;
 
 
-1. How many pizzas were ordered?
+-- 1. How many pizzas were ordered?
 select count(order_id) from pizza_runner.customer_orders;
 
-2. How many unique customer orders were made?
+-- 2. How many unique customer orders were made?
 select count(distinct order_id) from pizza_runner.customer_orders;
 
-3. How many successful orders were delivered by each runner?
+-- 3. How many successful orders were delivered by each runner?
 select runner_id, count(order_id) from runner_orders_edit 
 where distance is not null
 group by runner_id order by runner_id asc;
 
-4. How many of each type of pizza was delivered?
+-- 4. How many of each type of pizza was delivered?
 select pizza_id, count(pizza_id) 
 from runner_orders_edit join customer_orders_edit
 on runner_orders_edit.order_id = customer_orders_edit.order_id
 where distance is not null group by pizza_id;
 
-5. How many Vegetarian and Meatlovers were ordered by each customer?
+-- 5. How many Vegetarian and Meatlovers were ordered by each customer?
 with cte1 as (
 	select customer_id, pizza_id, count(pizza_id) as meatlover
 	from customer_orders_edit where pizza_id = 1
@@ -56,13 +56,13 @@ cte2 as (
 )
 select distinct cte1.customer_id, meatlover, veglover from cte1, cte2;
 
-6. What was the maximum number of pizzas delivered in a single order?
+-- 6. What was the maximum number of pizzas delivered in a single order?
 select order_id, count(order_id)
 from customer_orders_edit
 group by order_id
 order by count(order_id) desc limit 1
 
-7. For each customer, how many delivered pizzas had at least 1 change and how many had no changes?
+-- 7. For each customer, how many delivered pizzas had at least 1 change and how many had no changes?
 
 8. How many pizzas were delivered that had both exclusions and extras?
 9. What was the total volume of pizzas ordered for each hour of the day?
